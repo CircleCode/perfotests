@@ -1,0 +1,3 @@
+[submodule "xhprof"]
+	path = xhprof
+	url = git@github.com:facebook/xhprof.git
