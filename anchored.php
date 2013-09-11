@@ -11,7 +11,7 @@ while(0 < strlen($string)) {
 
     foreach($tokens as $token) {
 
-        if(0 === preg_match('#^(?:' . $token . ')#u', $string, $matches))
+        if(0 === preg_match('#^(?|' . $token . ')#u', $string, $matches))
             continue;
 
         $string = mb_substr($string, mb_strlen($matches[0]));

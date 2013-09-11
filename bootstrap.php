@@ -17,6 +17,9 @@ $string_ = var_export($string, true);
 $str = <<<PHP
 <?php
 
+mb_internal_encoding('UTF-8');
+mb_regex_encoding('UTF-8');
+
 \$tokens = $tokens_;
 \$string = $string_;
 \$run = $run;
