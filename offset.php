@@ -14,7 +14,7 @@ while($offset < $maxoffset) {
 
     foreach($tokens as $token) {
 
-        if(0 === preg_match('#(?|' . $token . ')#u', $string, $matches, PREG_OFFSET_CAPTURE, $offset))
+        if(0 === preg_match('#\K(?|' . $token . ')#u', $string, $matches, PREG_OFFSET_CAPTURE, $offset))
             continue;
 
         if($offset !== $matches[0][1])
