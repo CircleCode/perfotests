@@ -17,3 +17,6 @@ $xhprof_runs->save_run($xhprof_data['raw'], "offset_aggregate_$runs");
 
 $xhprof_data = xhprof_aggregate_runs($xhprof_runs, range(1,$runs), array_fill(0, 10, 1), 'anchored');
 $xhprof_runs->save_run($xhprof_data['raw'], "anchored_aggregate_$runs");
+
+$xhprof_data = xhprof_aggregate_runs($xhprof_runs, range(1,$runs), array_fill(0, 10, 1), 'offset_assertion');
+$xhprof_runs->save_run($xhprof_data['raw'], "offset_assertion_$runs");
