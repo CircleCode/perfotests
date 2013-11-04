@@ -20,7 +20,7 @@ while($offset < $maxoffset) {
         if($offset !== $matches[0][1])
             continue;
 
-        $offset += mb_strlen($matches[0][0]);
+        $offset += strlen($matches[0][0]);
         break;
     }
 }
