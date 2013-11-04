@@ -18,6 +18,7 @@ do
     php bootstrap.php -i=$run -l=$LENGTH
     php -d xhprof.output_dir=$WORK_DIR anchored.php
     php -d xhprof.output_dir=$WORK_DIR offset.php
+    php -d xhprof.output_dir=$WORK_DIR offset_assertion.php
 done
 
 sleep 1

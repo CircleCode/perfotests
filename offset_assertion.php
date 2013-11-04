@@ -14,13 +14,10 @@ while($offset < $maxoffset) {
 
     foreach($tokens as $token) {
 
-        if(0 === preg_match('#(?|' . $token . ')#u', $string, $matches, PREG_OFFSET_CAPTURE, $offset))
+        if(0 === preg_match('#\G(?|' . $token . ')#u', $string, $matches, 0, $offset))
             continue;
 
-        if($offset !== $matches[0][1])
-            continue;
-
-        $offset += strlen($matches[0][0]);
+        $offset += strlen($matches[0]);
         break;
     }
 }
@@ -32,4 +29,4 @@ include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_lib.php";
 include_once $XHPROF_ROOT . "/xhprof_lib/utils/xhprof_runs.php";
 
 $xhprof_runs = new XHProfRuns_Default();
-$xhprof_runs->save_run($xhprof_data, "offset", $run);
+$xhprof_runs->save_run($xhprof_data, "offset_assertion", $run);
