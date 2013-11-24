@@ -8,7 +8,7 @@ require_once 'vars.php';
 xhprof_enable(XHPROF_FLAGS_CPU + XHPROF_FLAGS_MEMORY);
 
 $offset           = 0;
-$maxoffset        = mb_strlen($string);
+$maxoffset        = strlen($string);
 
 while($offset < $maxoffset) {
 
