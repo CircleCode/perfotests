@@ -5,7 +5,7 @@ $run = $options['i'];
 $length = $options['l'];
 
 $string = "";
-$tokens = array('foo', 'bar', 'baz', 'qux', 'gordon', 'freeman');
+$tokens = array('foo', 'bar', 'baz', 'qux', 'gordon', 'freeman', '✔', '✘');
 $_      = count($tokens) - 1;
 
 for($i = 0; $i < $length; ++$i)
